@@ -15,8 +15,9 @@ void draw() {
     float yoff = 0.0;
 
     for (int y = 0; y < height; y++) {
+      noiseDetail(10, 0.65);
       float bright = map(noise(xoff, yoff), 0, 1, 0, 255);
-      pixels[x + y * width] = color(bright);
+      pixels[x + y * width] = color(bright, bright, 255);
       yoff += 0.01;
     }
 
